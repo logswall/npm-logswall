@@ -1,0 +1,15 @@
+{
+  "name": "logswall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Traian Cristian Cirstea",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^7.0.2",
+    "ws": "^7.2.3"
+  }
+}
