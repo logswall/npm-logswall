@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const uuidv4 = require('uuid').v4;
 
 const Console = (options) => {
-    const ws = new WebSocket(options.url || "https://api.logswall.com", { headers: { "Authentication": "Barear " + options.apiSecret } });
+    const ws = new WebSocket(options.url || "https://api.logswall.com", { headers: { "Authentication": "Barear " + options.key } });
 
     ws.on('error', function error(err) {
         if (err) {
@@ -28,7 +28,7 @@ const Console = (options) => {
     const toMessage = (...args) => {
         return {
             i: uuidv4(),
-            q: options.queueId,
+            q: options.queue,
             t: "console",
             m: args
         }
